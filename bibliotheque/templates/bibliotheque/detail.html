@@ -1,0 +1,71 @@
+{% extends 'bibliotheque/base.html' %}
+
+{% block title %}{{ livre.titre }}{% endblock %}
+
+{% block content %}
+
+<article class="carte">
+
+<h2>{{ livre.titre }}</h2>
+
+<p>
+    <strong>Auteur :</strong>
+    {{ livre.auteur.nom }}
+</p>
+
+<h3>Biographie de l'auteur</h3>
+
+<p>
+    {{ livre.auteur.biographie|default:"Aucune biographie disponible."|linebreaksbr }}
+</p>
+
+<p>
+    <strong>ISBN :</strong>
+    {{ livre.isbn|default:"Non renseigné" }}
+</p>
+
+<p>
+    <strong>Date de publication :</strong>
+
+    {% if livre.date_publication %}
+        {{ livre.date_publication|date:"d/m/Y" }}
+    {% else %}
+        Non renseignée
+    {% endif %}
+</p>
+
+<h3>Description</h3>
+
+<p>
+    {{ livre.description|default:"Aucune description disponible."|linebreaksbr }}
+</p>
+
+<p>
+    <strong>Ajouté le :</strong>
+    {{ livre.date_ajout|date:"d/m/Y à H:i" }}
+</p>
+
+<div class="actions-formulaire">
+
+    <a class="bouton"
+       href="{% url 'bibliotheque:accueil' %}">
+        Retour au catalogue
+    </a>
+
+    {% if user.is_staff %}
+        <a class="bouton"
+           href="{% url 'bibliotheque:modifier_livre' livre.id %}">
+            Modifier ce livre
+        </a>
+
+        <a class="bouton-supprimer"
+           href="{% url 'bibliotheque:supprimer_livre' livre.id %}">
+            Supprimer ce livre
+        </a>
+    {% endif %}
+
+</div>
+
+</article>
+
+{% endblock %}

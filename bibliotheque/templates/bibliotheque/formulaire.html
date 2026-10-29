@@ -1,0 +1,49 @@
+{% extends 'bibliotheque/base.html' %}
+
+{% block title %}{{ titre_page }}{% endblock %}
+
+{% block content %}
+
+<section class="formulaire-page">
+    <h2>{{ titre_page }}</h2>
+
+<form method="post" class="formulaire-livre">
+    {% csrf_token %}
+
+    {% if form.non_field_errors %}
+        <div class="erreurs">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+
+    {% for champ in form %}
+        <div class="champ-formulaire">
+            <label for="{{ champ.id_for_label }}">
+                {{ champ.label }}
+            </label>
+
+            {{ champ }}
+
+            {% if champ.help_text %}
+                <small>{{ champ.help_text }}</small>
+            {% endif %}
+
+            {% for erreur in champ.errors %}
+                <p class="erreur">{{ erreur }}</p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <div class="actions-formulaire">
+        <button type="submit" class="bouton">
+            Enregistrer
+        </button>
+
+        <a href="{% url 'bibliotheque:accueil' %}" class="bouton-annuler">
+            Annuler
+        </a>
+    </div>
+</form>
+
+</section>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'bibliotheque/base.html' %}
+
+{% block title %}Catalogue des livres{% endblock %}
+
+{% block content %}
+<h2>Notre catalogue</h2>
+
+<form method="get" class="recherche">
+    <label class="sr-only" for="recherche">Rechercher un livre</label>
+    <input
+        id="recherche"
+        type="search"
+        name="q"
+        value="{{ recherche }}"
+        placeholder="Titre, auteur ou ISBN..."
+    >
+    <button type="submit">Rechercher</button>
+</form>
+
+{% if recherche %}
+    <p>Résultats pour : <strong>{{ recherche }}</strong></p>
+{% endif %}
+
+{% if page_obj.object_list %}
+    <div class="grille">
+        {% for livre in page_obj %}
+            <article class="carte">
+                <h3>{{ livre.titre }}</h3>
+                <p><strong>Auteur :</strong> {{ livre.auteur.nom }}</p>
+                {% if livre.date_publication %}
+                    <p><strong>Année :</strong> {{ livre.date_publication|date:"Y" }}</p>
+                {% endif %}
+                <a class="bouton" href="{% url 'bibliotheque:detail_livre' livre.id %}">
+                    Voir le détail
+                </a>
+            </article>
+        {% endfor %}
+    </div>
+
+    {% if page_obj.paginator.num_pages > 1 %}
+        <nav class="pagination" aria-label="Pagination">
+            {% if page_obj.has_previous %}
+                <a href="?q={{ recherche|urlencode }}&page={{ page_obj.previous_page_number }}">
+                    Précédente
+                </a>
+            {% endif %}
+            <span>Page {{ page_obj.number }} sur {{ page_obj.paginator.num_pages }}</span>
+            {% if page_obj.has_next %}
+                <a href="?q={{ recherche|urlencode }}&page={{ page_obj.next_page_number }}">
+                    Suivante
+                </a>
+            {% endif %}
+        </nav>
+    {% endif %}
+{% else %}
+    <p class="aucun-resultat">
+        {% if recherche %}
+            Aucun livre ne correspond à votre recherche.
+        {% else %}
+            Le catalogue ne contient aucun livre pour le moment.
+        {% endif %}
+    </p>
+{% endif %}
+{% endblock %}

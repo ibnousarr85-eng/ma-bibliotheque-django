@@ -1,0 +1,42 @@
+{% extends 'bibliotheque/base.html' %}
+
+{% block title %}Confirmer la suppression du livre{% endblock %}
+
+{% block content %}
+
+<section class="formulaire-page">
+    <h2>Confirmer la suppression</h2>
+
+<div class="carte">
+    <p>
+        Es-tu sûr de vouloir supprimer le livre suivant ?
+    </p>
+
+    <h3>{{ livre.titre }}</h3>
+
+    <p>
+        <strong>Auteur :</strong> {{ livre.auteur.nom }}
+    </p>
+
+    <p>
+        Cette action est définitive.
+    </p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        <div class="actions-formulaire">
+            <button type="submit" class="bouton-supprimer">
+                Oui, supprimer
+            </button>
+
+            <a href="{% url 'bibliotheque:detail_livre' livre.id %}"
+               class="bouton-annuler">
+                Annuler
+            </a>
+        </div>
+    </form>
+</div>
+
+</section>
+{% endblock %}

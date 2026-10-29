@@ -1,0 +1,53 @@
+{% extends 'bibliotheque/base.html' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block content %}
+
+<section class="formulaire-page">
+
+<h2>Connexion</h2>
+
+<p>Connecte-toi pour pouvoir gérer les livres de la bibliothèque.</p>
+
+<form method="post" class="formulaire-livre">
+
+    {% csrf_token %}
+
+    {% if form.errors %}
+        <p class="erreur">
+            Nom d'utilisateur ou mot de passe incorrect.
+        </p>
+    {% endif %}
+
+    <div class="champ-formulaire">
+        <label for="{{ form.username.id_for_label }}">
+            Nom d'utilisateur
+        </label>
+
+        {{ form.username }}
+    </div>
+
+    <div class="champ-formulaire">
+        <label for="{{ form.password.id_for_label }}">
+            Mot de passe
+        </label>
+
+        {{ form.password }}
+    </div>
+
+    <input type="hidden" name="next" value="{{ next }}">
+
+    <button type="submit" class="bouton">
+        Se connecter
+    </button>
+
+</form>
+
+<p>
+    La consultation du catalogue reste accessible sans connexion.
+</p>
+
+</section>
+
+{% endblock %}

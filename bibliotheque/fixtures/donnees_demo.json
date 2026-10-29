@@ -1,0 +1,282 @@
+[
+  {
+    "model": "bibliotheque.auteur",
+    "pk": 1,
+    "fields": {
+      "nom": "Mariama B\u00e2",
+      "biographie": "N\u00e9e \u00e0 Dakar en 1929, Mariama B\u00e2 est une \u00e9crivaine s\u00e9n\u00e9galaise et une voix majeure du f\u00e9minisme africain. Form\u00e9e \u00e0 l'\u00c9cole normale de Rufisque, elle a enseign\u00e9 et travaill\u00e9 dans l'\u00e9ducation. Ses romans, notamment Une si longue lettre et Un chant \u00e9carlate, abordent la condition des femmes et les transformations de la soci\u00e9t\u00e9 s\u00e9n\u00e9galaise."
+    }
+  },
+  {
+    "model": "bibliotheque.auteur",
+    "pk": 2,
+    "fields": {
+      "nom": "Cheikh Hamidou Kane",
+      "biographie": "\u00c9crivain s\u00e9n\u00e9galais n\u00e9 \u00e0 Matam en 1928, Cheikh Hamidou Kane a re\u00e7u une \u00e9ducation musulmane traditionnelle avant d'\u00e9tudier le droit et la philosophie \u00e0 Paris. Il a ensuite occup\u00e9 des fonctions publiques au S\u00e9n\u00e9gal et travaill\u00e9 pour l'UNICEF en Afrique de l'Ouest. Son roman L'Aventure ambigu\u00eb explore les tensions entre \u00e9ducation occidentale, traditions africaines et foi."
+    }
+  },
+  {
+    "model": "bibliotheque.auteur",
+    "pk": 3,
+    "fields": {
+      "nom": "Ousmane Semb\u00e8ne",
+      "biographie": "N\u00e9 \u00e0 Ziguinchor en 1923 et mort \u00e0 Dakar en 2007, Ousmane Semb\u00e8ne fut romancier et cin\u00e9aste s\u00e9n\u00e9galais. Souvent consid\u00e9r\u00e9 comme l'une des grandes figures du cin\u00e9ma africain, il a aussi marqu\u00e9 la litt\u00e9rature africaine postcoloniale. Ses romans d\u00e9crivent notamment le colonialisme, les in\u00e9galit\u00e9s sociales et les \u00e9lites apr\u00e8s les ind\u00e9pendances."
+    }
+  },
+  {
+    "model": "bibliotheque.auteur",
+    "pk": 4,
+    "fields": {
+      "nom": "Aminata Sow Fall",
+      "biographie": "N\u00e9e \u00e0 Saint-Louis en 1941, Aminata Sow Fall est une romanci\u00e8re s\u00e9n\u00e9galaise d'expression fran\u00e7aise. Apr\u00e8s des \u00e9tudes de langues modernes \u00e0 la Sorbonne, elle a enseign\u00e9 au S\u00e9n\u00e9gal et contribu\u00e9 \u00e0 la r\u00e9forme de l'enseignement du fran\u00e7ais. Ses romans, dont La Gr\u00e8ve des b\u00e0ttu, traitent avec humour et satire de la pauvret\u00e9, des rapports sociaux et des traditions."
+    }
+  },
+  {
+    "model": "bibliotheque.auteur",
+    "pk": 5,
+    "fields": {
+      "nom": "Boubacar Boris Diop",
+      "biographie": "\u00c9crivain, journaliste et sc\u00e9nariste s\u00e9n\u00e9galais n\u00e9 \u00e0 Dakar en 1946, Boubacar Boris Diop a enseign\u00e9 la litt\u00e9rature et la philosophie avant de travailler dans le journalisme et la vie culturelle. Il \u00e9crit en fran\u00e7ais et en wolof. Ses romans abordent l'histoire, la m\u00e9moire et la soci\u00e9t\u00e9, notamment dans Murambi, le livre des ossements, consacr\u00e9 au g\u00e9nocide des Tutsi au Rwanda. Il a re\u00e7u le Neustadt International Prize for Literature en 2022."
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 1,
+    "fields": {
+      "titre": "Une si longue lettre",
+      "auteur": 1,
+      "isbn": "",
+      "description": "Roman \u00e9pistolaire dans lequel Ramatoulaye \u00e9crit \u00e0 son amie A\u00efssatou apr\u00e8s la mort de son mari. Le r\u00e9cit aborde le deuil, l'amiti\u00e9 et la condition des femmes.",
+      "date_publication": "1979-01-01",
+      "date_ajout": "2026-10-29T16:34:44.257648Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 2,
+    "fields": {
+      "titre": "L'Aventure ambigu\u00eb",
+      "auteur": 2,
+      "isbn": "",
+      "description": "Roman suivant Samba Diallo, un jeune Peulh partag\u00e9 entre son \u00e9ducation coranique et ses \u00e9tudes en France.",
+      "date_publication": "1961-01-01",
+      "date_ajout": "2026-10-29T16:34:44.273829Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 3,
+    "fields": {
+      "titre": "Les Bouts de bois de Dieu",
+      "auteur": 3,
+      "isbn": "",
+      "description": "Roman inspir\u00e9 de la gr\u00e8ve des cheminots de la ligne Dakar-Niger de 1947-1948 et de la solidarit\u00e9 des travailleurs et de leurs familles.",
+      "date_publication": "1960-01-01",
+      "date_ajout": "2026-10-29T16:51:04.469799Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 4,
+    "fields": {
+      "titre": "La Gr\u00e8ve des b\u00e0ttu",
+      "auteur": 4,
+      "isbn": "",
+      "description": "Satire sociale dans laquelle les mendiants de Dakar se mettent en gr\u00e8ve apr\u00e8s avoir \u00e9t\u00e9 chass\u00e9s du centre-ville.",
+      "date_publication": "1979-01-01",
+      "date_ajout": "2026-10-29T16:51:04.549095Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 5,
+    "fields": {
+      "titre": "Le Cavalier et son ombre",
+      "auteur": 5,
+      "isbn": "",
+      "description": "Roman qui entrelace m\u00e9moire, r\u00e9cits et histoire politique autour de la conteuse Khadidja.",
+      "date_publication": "1997-01-01",
+      "date_ajout": "2026-10-29T16:51:04.560680Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 6,
+    "fields": {
+      "titre": "Xala",
+      "auteur": 3,
+      "isbn": "",
+      "description": "Satire de la bourgeoisie s\u00e9n\u00e9galaise apr\u00e8s l'ind\u00e9pendance, centr\u00e9e sur un homme d'affaires frapp\u00e9 d'impuissance le soir de son mariage.",
+      "date_publication": "1973-01-01",
+      "date_ajout": "2026-10-29T16:51:04.573246Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 7,
+    "fields": {
+      "titre": "Le Docker noir",
+      "auteur": 3,
+      "isbn": "",
+      "description": "Roman sur Diaw Falla, docker s\u00e9n\u00e9galais \u00e0 Marseille, confront\u00e9 au racisme et \u00e0 l'exploitation de son travail litt\u00e9raire.",
+      "date_publication": "1956-01-01",
+      "date_ajout": "2026-10-29T16:51:04.585584Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 8,
+    "fields": {
+      "titre": "L'Appel des ar\u00e8nes",
+      "auteur": 4,
+      "isbn": "",
+      "description": "Roman sur l'attachement d'un jeune gar\u00e7on aux combats de lutte traditionnelle et le regard de sa famille sur cette passion.",
+      "date_publication": "1982-01-01",
+      "date_ajout": "2026-10-29T16:51:04.596803Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 9,
+    "fields": {
+      "titre": "Un chant \u00e9carlate",
+      "auteur": 1,
+      "isbn": "",
+      "description": "Roman posthume de Mariama B\u00e2 sur le mariage de Mireille, une Fran\u00e7aise, et d'Ousmane, un S\u00e9n\u00e9galais, et sur leurs conflits culturels et familiaux.",
+      "date_publication": "1981-01-01",
+      "date_ajout": "2026-10-29T17:00:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 10,
+    "fields": {
+      "titre": "O Pays, mon beau peuple !",
+      "auteur": 3,
+      "isbn": "",
+      "description": "Roman de retour au pays et de changement social : Oumar revient en Casamance avec le projet de moderniser l'agriculture.",
+      "date_publication": "1957-01-01",
+      "date_ajout": "2026-10-29T17:01:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 11,
+    "fields": {
+      "titre": "L'Harmattan",
+      "auteur": 3,
+      "isbn": "",
+      "description": "Roman situ\u00e9 dans une capitale africaine \u00e0 la veille d'un r\u00e9f\u00e9rendum sur l'ind\u00e9pendance.",
+      "date_publication": "1964-01-01",
+      "date_ajout": "2026-10-29T17:02:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 12,
+    "fields": {
+      "titre": "Le Mandat, pr\u00e9c\u00e9d\u00e9 de Vehi-Ciosane",
+      "auteur": 3,
+      "isbn": "",
+      "description": "Deux r\u00e9cits consacr\u00e9s aux difficult\u00e9s de la vie quotidienne et aux abus bureaucratiques dans le S\u00e9n\u00e9gal apr\u00e8s l'ind\u00e9pendance.",
+      "date_publication": "1965-01-01",
+      "date_ajout": "2026-10-29T17:03:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 13,
+    "fields": {
+      "titre": "Le Revenant",
+      "auteur": 4,
+      "isbn": "",
+      "description": "Premier roman d'Aminata Sow Fall, publi\u00e9 en 1976.",
+      "date_publication": "1976-01-01",
+      "date_ajout": "2026-10-29T17:04:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 14,
+    "fields": {
+      "titre": "Ex-p\u00e8re de la nation",
+      "auteur": 4,
+      "isbn": "",
+      "description": "Roman d'Aminata Sow Fall paru chez L'Harmattan en 1987.",
+      "date_publication": "1987-01-01",
+      "date_ajout": "2026-10-29T17:05:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 15,
+    "fields": {
+      "titre": "Douceurs du bercail",
+      "auteur": 4,
+      "isbn": "",
+      "description": "Roman d'Aminata Sow Fall publi\u00e9 en 1998.",
+      "date_publication": "1998-01-01",
+      "date_ajout": "2026-10-29T17:06:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 16,
+    "fields": {
+      "titre": "Les Tambours de la m\u00e9moire",
+      "auteur": 5,
+      "isbn": "",
+      "description": "Roman de Boubacar Boris Diop paru en 1987, r\u00e9compens\u00e9 par le Grand Prix de la R\u00e9publique du S\u00e9n\u00e9gal pour les Lettres.",
+      "date_publication": "1987-01-01",
+      "date_ajout": "2026-10-29T17:07:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 17,
+    "fields": {
+      "titre": "Les Traces de la meute",
+      "auteur": 5,
+      "isbn": "",
+      "description": "Roman de Boubacar Boris Diop publi\u00e9 en 1993.",
+      "date_publication": "1993-01-01",
+      "date_ajout": "2026-10-29T17:08:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 18,
+    "fields": {
+      "titre": "Murambi, le livre des ossements",
+      "auteur": 5,
+      "isbn": "",
+      "description": "Roman de m\u00e9moire \u00e9crit apr\u00e8s la participation de l'auteur au projet Rwanda : \u00e9crire par devoir de m\u00e9moire.",
+      "date_publication": "2000-01-01",
+      "date_ajout": "2026-10-29T17:09:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 19,
+    "fields": {
+      "titre": "Doomi Golo",
+      "auteur": 5,
+      "isbn": "",
+      "description": "Roman en wolof de Boubacar Boris Diop, dont la version fran\u00e7aise est parue sous le titre Les Petits de la guenon.",
+      "date_publication": "2003-01-01",
+      "date_ajout": "2026-10-29T17:10:00Z"
+    }
+  },
+  {
+    "model": "bibliotheque.livre",
+    "pk": 20,
+    "fields": {
+      "titre": "Kaveena",
+      "auteur": 5,
+      "isbn": "",
+      "description": "Roman de Boubacar Boris Diop paru en 2006.",
+      "date_publication": "2006-01-01",
+      "date_ajout": "2026-10-29T17:11:00Z"
+    }
+  }
+]
